@@ -61,13 +61,39 @@ function playRound(playerChoice, computerChoice) {
           ${capitalize(computerChoice)} beats ${capitalize(playerChoice)}.
           Computer is victorious.`
           );
+      }
       } else {
         playerScore = ++playerScore;
         keepPlayerScore();
-        
+        if (playerScore === 1) {
+          displayResults(
+            `You got a point. How cute.
+            ${capitalize(playerChoice)} beats ${capitalize(computerChoice)}.`
+          );
+        } else if (playerScore === 2) {
+          displayResults(
+            `Don't get overconfident.
+            ${capitalize(playerChoice)} beats ${capitalize(computerChoice)}.`
+          );
+        } else if (playerScore === 3) {
+          displayResults(
+            `I can detect your hubris from here.
+            ${capitalize(playerChoice)} beats ${capitalize(computerChoice)}.`
+          );
+        } else if (playerScore === 4) {
+          displayResults(
+            `You've made it quite far. Pity this is the end for you.
+            ${capitalize(playerChoice)} beats ${capitalize(computerChoice)}.`
+          );
+        } else {
+          displayResults(
+            `You may think think this has ended. I'll be waiting here for your return.
+            ${capitalize(playerChoice)} beats ${capitalize(computerChoice)}.`
+          );
+        }
       }
     }
-  }
+  
       
 function displayResults() {
 
